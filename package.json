@@ -1,0 +1,20 @@
+{
+  "name": "buggy-calculator",
+  "version": "1.0.0",
+  "description": "A simple Node.js calculator supporting basic arithmetic and expression evaluation.",
+  "main": "src/calculator.js",
+  "scripts": {
+    "start": "node src/calculator.js",
+    "test": "jest"
+  },
+  "keywords": [
+    "calculator",
+    "math",
+    "parser"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
