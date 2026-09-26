@@ -58,17 +58,29 @@ function evaluate(expression) {
     return 0;
   }
 
-  let result = parseNumber(tokens[0]);
-
-  for (let i = 1; i < tokens.length; i += 2) {
-    const operator = tokens[i];
-    const nextToken = tokens[i + 1];
-
-    if (!nextToken) {
-      break;
+  // First pass: handle *, /, % operators (higher precedence)
+  const intermediate = [];
+  let i = 0;
+  while (i < tokens.length) {
+    const token = tokens[i];
+    if (token === '*' || token === '/' || token === '%') {
+      // Perform operation with previous number and next number
+      const prev = intermediate.pop();
+      const next = tokens[i + 1];
+      const computed = applyOperator(parseNumber(prev), token, parseNumber(next));
+      intermediate.push(String(computed));
+      i += 2; // Skip the next number as it's been consumed
+    } else {
+      intermediate.push(token);
+      i += 1;
     }
+  }
 
-    const nextNumber = parseNumber(nextToken);
+  // Second pass: handle + and - (left to right)
+  let result = parseNumber(intermediate[0]);
+  for (let j = 1; j < intermediate.length; j += 2) {
+    const operator = intermediate[j];
+    const nextNumber = parseNumber(intermediate[j + 1]);
     result = applyOperator(result, operator, nextNumber);
   }
 

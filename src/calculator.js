@@ -36,7 +36,7 @@ class Calculator {
    * @returns {number}
    */
   subtract(value) {
-    this.currentValue = operations.subtract(value, this.currentValue);
+    this.currentValue = operations.subtract(this.currentValue, value);
     this.history.push(`- ${value}`);
     return this.currentValue;
   }
