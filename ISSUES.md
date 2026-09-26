@@ -4,7 +4,7 @@ This document lists active issue reports filed by users and testers.
 
 ---
 
-### Issue #101: `subtract()` method inverts operand order
+### [Issue #1: `subtract()` method inverts operand order](https://github.com/Keshavr57/Bugy-Calcu/issues/1)
 
 - **Status**: Open
 - **Type**: Bug
@@ -24,7 +24,7 @@ This document lists active issue reports filed by users and testers.
 
 ---
 
-### Issue #102: Expression evaluator ignores standard operator precedence
+### [Issue #2: Expression evaluator ignores standard operator precedence](https://github.com/Keshavr57/Bugy-Calcu/issues/2)
 
 - **Status**: Open
 - **Type**: Bug
@@ -44,7 +44,7 @@ This document lists active issue reports filed by users and testers.
 
 ---
 
-### Issue #103: Multiplication by zero fails to return zero
+### [Issue #3: Multiplication by zero fails to return zero](https://github.com/Keshavr57/Bugy-Calcu/issues/3)
 
 - **Status**: Open
 - **Type**: Bug
@@ -63,7 +63,7 @@ This document lists active issue reports filed by users and testers.
 
 ---
 
-### Issue #104: Decimal numbers lose fractional values in expressions
+### [Issue #4: Decimal numbers lose fractional values in expressions](https://github.com/Keshavr57/Bugy-Calcu/issues/4)
 
 - **Status**: Open
 - **Type**: Bug

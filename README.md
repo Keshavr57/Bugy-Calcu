@@ -110,9 +110,9 @@ npm test -- --watch
 
 ## Known Issues
 
-The following issues have been reported by users and need investigation:
+Track active bug reports and community feedback directly in the [GitHub Issues](https://github.com/Keshavr57/Bugy-Calcu/issues) tracker:
 
-### Issue #101: `subtract()` method inverts operand order
+### [Issue #1: `subtract()` method inverts operand order](https://github.com/Keshavr57/Bugy-Calcu/issues/1)
 - **Reporter**: `@user_dev`
 - **Description**: When invoking `.subtract()` on a Calculator instance initialized with a starting value, the result is inverted.
 - **Steps to Reproduce**:
@@ -123,7 +123,7 @@ The following issues have been reported by users and need investigation:
   // Actual: -15
   ```
 
-### Issue #102: Expression evaluator ignores standard operator precedence
+### [Issue #2: Expression evaluator ignores standard operator precedence](https://github.com/Keshavr57/Bugy-Calcu/issues/2)
 - **Reporter**: `@math_tester`
 - **Description**: Expression evaluation currently computes tokens sequentially from left to right instead of respecting operator precedence (`*` and `/` before `+` and `-`).
 - **Steps to Reproduce**:
@@ -134,7 +134,7 @@ The following issues have been reported by users and need investigation:
   // Actual: 20
   ```
 
-### Issue #103: Multiplication by zero fails to return zero
+### [Issue #3: Multiplication by zero fails to return zero](https://github.com/Keshavr57/Bugy-Calcu/issues/3)
 - **Reporter**: `@qa_lead`
 - **Description**: Calling the multiplication operation with `0` as an operand returns the non-zero operand rather than `0`.
 - **Steps to Reproduce**:
@@ -145,7 +145,7 @@ The following issues have been reported by users and need investigation:
   // Actual: 5
   ```
 
-### Issue #104: Decimal numbers lose fractional values in expressions
+### [Issue #4: Decimal numbers lose fractional values in expressions](https://github.com/Keshavr57/Bugy-Calcu/issues/4)
 - **Reporter**: `@data_analyst`
 - **Description**: Floating-point numbers passed in expression strings appear truncated to integers prior to calculation.
 - **Steps to Reproduce**:
