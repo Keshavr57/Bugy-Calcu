@@ -12,6 +12,13 @@
     "math",
     "parser"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/example/buggy-calculator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/example/buggy-calculator/issues"
+  },
   "author": "",
   "license": "MIT",
   "devDependencies": {

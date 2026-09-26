@@ -29,6 +29,7 @@ buggy-calculator/
 │   └── operations.test.js
 ├── package.json
 ├── README.md
+├── ISSUES.md
 └── .gitignore
 ```
 
@@ -77,6 +78,22 @@ const result = calc.evaluate("10 + 5 * 2");
 console.log(result); // 20
 ```
 
+## Git Repository
+
+Clone and set up the repository locally:
+
+```bash
+git clone https://github.com/example/buggy-calculator.git
+cd buggy-calculator
+```
+
+Inspect commit history or status:
+
+```bash
+git status
+git log -1
+```
+
 ## Running Tests
 
 Run the test suite using Jest:
@@ -90,3 +107,52 @@ Run tests in watch mode:
 ```bash
 npm test -- --watch
 ```
+
+## Known Issues
+
+The following issues have been reported by users and need investigation:
+
+### Issue #101: `subtract()` method inverts operand order
+- **Reporter**: `@user_dev`
+- **Description**: When invoking `.subtract()` on a Calculator instance initialized with a starting value, the result is inverted.
+- **Steps to Reproduce**:
+  ```javascript
+  const calc = new Calculator(20);
+  const result = calc.subtract(5);
+  // Expected: 15
+  // Actual: -15
+  ```
+
+### Issue #102: Expression evaluator ignores standard operator precedence
+- **Reporter**: `@math_tester`
+- **Description**: Expression evaluation currently computes tokens sequentially from left to right instead of respecting operator precedence (`*` and `/` before `+` and `-`).
+- **Steps to Reproduce**:
+  ```javascript
+  const calc = new Calculator();
+  const result = calc.evaluate("2 + 3 * 4");
+  // Expected: 14
+  // Actual: 20
+  ```
+
+### Issue #103: Multiplication by zero fails to return zero
+- **Reporter**: `@qa_lead`
+- **Description**: Calling the multiplication operation with `0` as an operand returns the non-zero operand rather than `0`.
+- **Steps to Reproduce**:
+  ```javascript
+  const operations = require('./src/operations');
+  const result = operations.multiply(5, 0);
+  // Expected: 0
+  // Actual: 5
+  ```
+
+### Issue #104: Decimal numbers lose fractional values in expressions
+- **Reporter**: `@data_analyst`
+- **Description**: Floating-point numbers passed in expression strings appear truncated to integers prior to calculation.
+- **Steps to Reproduce**:
+  ```javascript
+  const calc = new Calculator();
+  const result = calc.evaluate("10.5 + 2.5");
+  // Expected: 13
+  // Actual: 12
+  ```
+
