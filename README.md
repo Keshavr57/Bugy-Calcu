@@ -83,7 +83,7 @@ console.log(result); // 20
 Clone and set up the repository locally:
 
 ```bash
-git clone https://github.com/example/buggy-calculator.git
+git clone https://github.com/Keshavr57/Bugy-Calcu.git
 cd buggy-calculator
 ```
 
